@@ -196,7 +196,8 @@ footer {
     padding: 3rem;
     color: #2b2823;
     bottom: 0;
-    position: relative;
+    position: fixed;
+    width: 95%;
 
 }
 
