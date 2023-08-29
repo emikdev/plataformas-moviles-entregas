@@ -1,0 +1,231 @@
+
+/* Aplicacion del estilo de fuente */
+
+html {
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+/* Estilo general del sitio web */
+
+body {
+
+    margin: 0;
+    background-color: #f9fadc;
+
+}
+
+/* Estilo del Header */
+
+header {
+
+background-color: #d4ceaa;
+color: #2b2823;
+padding: 3rem 2rem;
+
+}
+
+header h2 {
+
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+header h1 {
+
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+
+/* Estilo del indice de navegacion */
+
+nav {
+
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+nav div {
+
+    transition: box-shadow 0.3s ease;
+    transition: all .9s ease;
+    background-color: #f9fadc;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+
+}
+
+nav div h3 {
+
+    margin: 1rem;
+
+}
+
+nav div ul {
+
+    margin: 1rem;
+    line-height: 1.5rem;
+
+}
+
+nav div:hover {
+
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+    transform: scale(1.08);
+    background-color: #8fa691;
+    color: whitesmoke;
+
+}
+
+/* Estilo de los enlaces del indice de navegacion */
+
+nav ul {
+
+list-style: square;
+
+}
+
+nav ul li a {
+
+    color: #7d1a0c;
+    text-decoration: none;
+
+}
+
+nav ul li a:hover {
+
+    color: #e64723;
+
+}
+
+/* Estilo del cuerpo de la pagina */
+
+.container {
+
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+section article {
+
+    transition: box-shadow 0.3s ease;
+    transition: all .9s ease;
+    background-color: #f9fadc;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+
+}
+
+section article h2, section article h3, section article h4, section article p {
+
+    margin: 1rem;
+
+}
+
+section article:hover {
+
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+    transform: scale(1.08);
+    background-color: #8fa691;
+    color: whitesmoke;
+
+}
+
+/* Estilo de las listas del cuerpo de la pagina */
+
+section article ul {
+
+    list-style: none;
+
+}
+
+/* Estilo de los enlaces a los proyectos */
+
+section article a {
+
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: #7d1a0c;
+
+}
+
+section article a:hover {
+
+    color: #e64723;
+
+}
+
+/* Estilo de los titulos de las cartas */
+
+.card_title {
+
+    font-size: 1.5rem;
+
+}
+
+.card_subtitle {
+
+    font-size: 1.1rem;
+
+}
+
+/* Estilo de las imagenes de los proyectos */
+
+section article ul li img {
+
+    width: 300px;
+    margin: auto;
+
+}
+
+/* Estilo de el pie de pagina */
+
+footer {
+
+    background-color: #d4ceaa;
+    padding: 3rem;
+    color: #2b2823;
+    bottom: 0;
+    position: relative;
+
+}
+
+/* Enlace de contacto */
+
+#contac {
+
+    float: right;
+
+}
+
+footer p {
+
+    margin: 0;
+
+}
+
+footer a {
+
+    transition: color 0.3s ease;
+    color: #2b2823;
+    text-decoration: none;
+
+}
+
+/* estilo al momento de poner el cursor sobre el link */
+
+footer a:hover {
+
+    color: #e64723;
+
+}
