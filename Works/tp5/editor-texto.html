@@ -50,6 +50,11 @@
                             Underline (Subrayado)
                         </button>
                     </div>
+                    <div class="col-12 col-md-4 my-1">
+                        <button id="btn-color-fuente" class="btn d-block w-100 btn-primary">
+                            Cambiar Color de Fuente
+                        </button>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -57,29 +62,78 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script type="text/javascript">
+
         /**
          * funcionNegrita()
          * esta función se va a llamar cuando el usuario selecciona la opción Bold (negrita).
          */
-        function funcionNegrita() {
-            // su implementación
+
+         function funcionNegrita() {
+            const texto = document.getElementById('texto');
+            const botonNegrita = document.getElementById('btn-negrita');
+
+            if (texto.style.fontWeight === 'bold') {
+                texto.style.fontWeight = 'normal';
+                botonNegrita.classList.remove('bold');
+                botonNegrita.style.backgroundColor = '';
+
+            } else {
+                texto.style.fontWeight = 'bold';
+                botonNegrita.classList.add('bold');
+                botonNegrita.style.backgroundColor = 'green';
+
+            }
+
         }
+
 
         /**
          * funcionCursiva()
          * esta función se va a llamar cuando el usuario selecciona la opción Bold (negrita).
          */
-        function funcionCursiva() {
-            // su implementación
+
+         function funcionCursiva() {
+            const texto = document.getElementById('texto');
+            const botonCursiva = document.getElementById('btn-cursiva');
+
+            if (texto.style.fontStyle === 'italic') {
+                texto.style.fontStyle = 'normal';
+                botonCursiva.classList.remove('bold');
+                botonCursiva.style.backgroundColor = '';
+
+            } else {
+                texto.style.fontStyle = 'italic';
+                botonCursiva.classList.add('bold');
+                botonCursiva.style.backgroundColor = 'green';
+
+            }
+
         }
+
 
         /**
          * funcionSubrayado()
          * esta función se va a llamar cuando el usuario selecciona la opción Bold (negrita).
          */
-        function funcionSubrayado() {
-            // su implementación
+
+         function funcionSubrayado() {
+            const texto = document.getElementById('texto');
+            const botonSubrayado = document.getElementById('btn-subrayado');
+
+            if (texto.style.textDecoration === 'underline') {
+                texto.style.textDecoration = 'none';
+                botonSubrayado.classList.remove('bold');
+                botonSubrayado.style.backgroundColor = '';
+                
+            } else {
+                texto.style.textDecoration = 'underline';
+                botonSubrayado.classList.add('bold');
+                botonSubrayado.style.backgroundColor = 'green';
+
+            }
+            
         }
+
 
         function handlerBoton(e) {
             const funcionBoton = e.target.dataset.funcion;
@@ -95,7 +149,19 @@
                     break;
             }
         }
+
+        function cambiarColorFuente() {
+            const texto = document.getElementById('texto');
+            const colores = ["red", "blue", "green", "purple", "orange", "pink", "brown", "black"];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            texto.style.color = colorAleatorio;
+
+        }
+
+        document.getElementById('btn-color-fuente').addEventListener('click', cambiarColorFuente);
+        
         document.querySelectorAll('button.btn').forEach(e => e.addEventListener('click', handlerBoton));
+        
     </script>
 </body>
 </html>
