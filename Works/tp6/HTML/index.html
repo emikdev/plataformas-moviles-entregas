@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pokédex</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="icon" href="../Assets/logo.ico">
+
+  <script src="../JS/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="https://kit.fontawesome.com/a3e9392e36.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>¡Bienvenido a la Pokédex!</h1>
+    <div class="row" id="pokemon-list">
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="pokemonInfoModal" tabindex="-1" role="dialog" aria-labelledby="pokemonInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="pokemonInfoModalLabel">Información del Pokémon</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        </div>
+
+        <div class="modal-body" id="pokemonInfoContent">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <button id="scroll-to-top-button" class="btn btn-primary"><i class="fa-solid fa-arrow-up"></i></button>
+
+</body>
+<footer>
+
+  <div>
+
+    <button id="load-more-button" class="btn btn-primary">
+      <span id="loading-spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+      Cargar más Pokémon
+    </button>
+
+  </div>
+
+  <script>
+
+    const loadMoreButton = document.getElementById("load-more-button");
+    const loadingSpinner = document.getElementById("loading-spinner");
+
+    loadMoreButton.addEventListener("click", () => {
+      loadingSpinner.classList.remove("d-none");
+      setTimeout(() => {
+        loadingSpinner.classList.add("d-none");
+      }, 2000);
+
+    });
+
+  </script>
+
+</footer>
+</html>
